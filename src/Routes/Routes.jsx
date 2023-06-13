@@ -9,6 +9,8 @@ import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
 import Secret from "../pages/Shared/Secret/Secret";
+import Dashboard from "../Layout/Dashboard";
+import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
 
 
 
@@ -43,4 +45,14 @@ import Secret from "../pages/Shared/Secret/Secret";
         }
       ]
     },
+    {
+      path:'dashboard',
+      element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+      children:[
+        {
+          path:'myclasses',
+          element:<MyClasses></MyClasses>
+        }
+      ]
+    }
   ]);

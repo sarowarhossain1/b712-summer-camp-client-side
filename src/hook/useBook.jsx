@@ -8,7 +8,7 @@ const {user} = useContext(AuthContext);
 const { refetch, data: book= [] } = useQuery({
     queryKey: ['book', user?.email],
     queryFn: async () => {
-        const res = await fetch(`http://localhost:5000/books?email=${user.email}`)
+        const res = await fetch(`http://localhost:5000/books?email=${user?.email}`)
         return res.json();
     },
   })

@@ -21,7 +21,7 @@ const NavBar = () => {
     <li><Link to="/classes">Classes</Link></li>
     <li><Link to="/secret">Secret</Link></li>
     <li>
-      <Link to='/'>
+      <Link to='/dashboard/myclasses'>
         Dashboard
        <RiDashboardFill>Dashboard</RiDashboardFill>
        +{book?.length || 0}

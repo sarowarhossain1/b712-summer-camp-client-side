@@ -2,12 +2,14 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import { useLocation, useNavigate } from "react-router-dom";
+import useBook from "../../../hook/useBook";
 
 
 
 const InstructorPage = ({item}) => {
  const {name, image, seats, price,_id} = item;
  const { user } = useContext(AuthContext);
+ const [, refetch] = useBook();
  const navigate = useNavigate();
  const location = useLocation();
   
@@ -25,6 +27,7 @@ const InstructorPage = ({item}) => {
         .then(res =>res.json())
         .then(data =>{
           if(data.insertedId){
+            refetch(); 
             Swal.fire({
               position: 'top-end',
               icon: 'success',
