@@ -6,6 +6,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Swal from 'sweetalert2'
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 
 
 
@@ -92,6 +93,8 @@ const from = location.state?.from?.pathname || "/";
         </div>
       </form>
       <p><small className=' text-center text-orange-400 cursor-pointer p-12 font-medium '>New Here? <Link to="/signup">Create an Account</Link></small></p>
+       <SocialLogin></SocialLogin>
+
     </div>
   </div>
 </div>

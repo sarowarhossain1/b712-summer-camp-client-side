@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import Secret from "../pages/Shared/Secret/Secret";
 import Dashboard from "../Layout/Dashboard";
 import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
+import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
 
 
 
@@ -52,6 +53,10 @@ import MyClasses from "../pages/Dashboard/MyClasses/MyClasses";
         {
           path:'myclasses',
           element:<MyClasses></MyClasses>
+        },
+        {
+          path:'allusers',
+          element:<AllUsers></AllUsers>
         }
       ]
     }
