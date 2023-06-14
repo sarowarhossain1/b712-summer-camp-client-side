@@ -14,7 +14,7 @@ const Banner = () => {
         <Carousel >
         <div>
             <img className="bg-orange-300 bg-opacity-50" src={img1} />
-            <p className="text-3xl text-center -mt-[550px] text-slate-400 align-baseline  me-96 uppercase font-bold " ><button className="btn btn-primary bg-orange-600">Kids Dance</button> <br />  Hip Hop Dance</p>
+            <p className="text-3xl text-center -mt-[550px] text-slate-400 align-baseline  me-96 uppercase font-bold " ><button className="btn btn-primary bg-orange-600">Kids Dance</button> <br /> <span className="font-bold text-pink-800 text-3xl"> Hip Hop Dance Club</span></p>
         </div>
         <div>
             <img src={img2} />
